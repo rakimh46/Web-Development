@@ -30,26 +30,28 @@ console.log("address object :", obj.address); //2    1 and 2 same method
 console.log("address object :", obj.address.state);  // 
 console.log("Movies :", obj.movies[1]);  // array index print
 console.log("function is inside an object", obj.sayhi("i am a paran"));
-
-
-
-     //update set
+console.log("----------------------");
+//update set
 console.log("UPDATE");
 obj.friends = ["peter", "thor", "tony"];
 obj.age =36;
 obj.address.pincode =110084;
+obj.movies[3]="infinty war";
 console.log("obj = ",obj);
+console.log("----------------------");
 
-   //delete
-   console.log("DELETE");
+//delete
+console.log("DELETE");
 delete obj.movies;
 console.log("obj = ",obj);
+console.log("----------------------");
 
-   //loop
-   console.log("LOOP");
+//loop
+console.log("LOOP");
 for(let key in obj){
     console.log("key :",key, "|value :", obj[key]);
     console.log("key :",key, "|value :", obj.key);   
 }
 console.log(obj.abc);
+console.log("----------------------");
 

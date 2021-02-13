@@ -18,16 +18,19 @@ let arr =[
         return a*a;
     }
 ];
+
 //get
 console.log(arr);
 console.log("val at idx 3", arr[3]);
 console.log("val at idx 5", arr[5].name);
 console.log("val at idx 7 idx =", arr[7]());
+console.log("------------");
 
 //loop
 for( let i=0; i<arr.length; i++){
     console.log(i, ":", arr[i]);
 }
+console.log("------------");
 
 //update 
 arr[5]="value";
@@ -49,12 +52,14 @@ console.log(arr);
 console.log(arr.length);
 const a=10;
 console.log(arr.length);
-console.log("''''''''''");
+console.log("------------");
+
 
 // addlast ->  push,
 // removeLast -> pop,
 arr.pop();
-console.log(arr);
+console.log("pop--",arr);
+
 
 //add first -> unshift
 arr.unshift();
@@ -62,10 +67,12 @@ arr.unshift();
 //removefirst -> shift
 arr.shift();
 
+console.log("------------");
 //gives copy of sliced arr
 let sliced =arr.slice(2,4);
 console.log("sliced",sliced);
 console.log("actual",arr.length);
+console.log("------------");
 
 //remove entries from array
 let removeEntries =arr.splice(2,2);
