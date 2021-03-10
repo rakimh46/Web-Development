@@ -27,4 +27,4 @@ function viewTree(dirPath,indent) {
     }
 }
 
-viewTree("d10","");
+viewTree("C:/Users","");
