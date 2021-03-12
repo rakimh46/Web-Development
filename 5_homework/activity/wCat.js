@@ -1,6 +1,7 @@
 let input = process.argv.slice(2);
 let cmd = input[0];
 fileContentObj = require("./command/read_content.js");
+bigLineObj = require("./command/bigLine.js");
 switch (cmd) {
     case "file_content":
         /* 
@@ -12,8 +13,14 @@ switch (cmd) {
             fileContentObj.contentfn(input[i]);
         }
         break;
+
+    case "-s":
+        for (let i = 1; i < input.length; i++) {
+            bigLineObj.bigLinefn(input[i]);
+        }        
+        break;
     default:
-        console.log("wrong");
+        console.log("wrong code");
 }
 
 
