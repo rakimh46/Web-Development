@@ -15,10 +15,12 @@ switch (cmd) {
         break;
 
     case "-s":
+        //3- node wcat.js -s filepath => convert big line breaks into a singular line break
         for (let i = 1; i < input.length; i++) {
             bigLineObj.bigLinefn(input[i]);
         }        
         break;
+
     default:
         console.log("wrong code");
 }
