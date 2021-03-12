@@ -1,24 +1,19 @@
+let fs = require("fs");
+let path = require("path");
+
 let types = {
     media: ["mp4", "mkv", "mp3"],
     archives: ["zip", "7z", "rar", "tar", "gz", "ar", "iso", "xz"],
     documents: ["docx", "doc", "pdf", "xlsx", "xls", "odt", "ods", "odg", "odf", "txt", "ps", "tex"],
     app: ["exe", "dmg", "pkg", "deb"]
 }
+//organized files:- app, media, archive, documents, others
 
-//organized files
-//app
-// media
-//archive
-//documents
-//others
 function dirCreator(dirpath) {
     if (fs.existsSync(dirpath) == false) {
         fs.mkdirSync(dirpath);
     }
 }
-
-let fs = require("fs");
-let path = require("path");
 
 //mkdir ,mkdirsync
 let input = process.argv.slice(2);
@@ -68,8 +63,8 @@ function getContent(dirpath) {
     return fs.readdirSync(dirpath);
 }
 
-function copyFiletoFolder(dirpath, destFolder){
-    let orgFileName=path.basename(dirpath);
+function copyFiletoFolder(dirpath, destFolder) {
+    let orgFileName = path.basename(dirpath);
     let destFilePath = path.join(destFolder, orgFileName);
     fs.copyFileSync(dirpath, destFilePath);
 }

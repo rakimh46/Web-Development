@@ -6,12 +6,10 @@
 let viewfnObj = require("./commands/view");
 let helpfnObj = require("./commands/help");
 let organizefnObj = require("./commands/organize");
-
 let input = process.argv.slice(2);
+// console.log(input);
+// console.log(input);
 let cmd = input[0]
-// console.log(input);
-// console.log(input);
-
 switch (cmd) {
     case "view":
         //view as tree
