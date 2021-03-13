@@ -2,12 +2,12 @@ let p = require("path");
 let fs = require("fs");
 
 function filedata(filename) {
-    fs.readFile(filename, 'utf8', function (err, data) {
+    fs.readFile(filename, cb);
+    function cb(err, data) {
         if (err) throw err;
-        console.log(p.basename(filename) + " -> " + data);
-    });
+        console.log(filename + " -> " + data);
+    }
 }
-
 function isFileorNot(dirpath) {
     //check extension
     return fs.lstatSync(dirpath).isFile();

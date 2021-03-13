@@ -2,21 +2,22 @@ let p = require("path");
 let fs = require("fs");
 let input = process.argv.slice(2);
 let dirpath;
-if(input.length>1){
-    for(let i=0; i<input.length; i++){
+if (input.length > 1) {
+    for (let i = 0; i < input.length; i++) {
         dirpath = input[i];
         viewTree(dirpath);
     }
-}else{
+} else {
     dirpath = input[0];
     viewTree(dirpath);
 }
 
-function filedata(filename){
-fs.readFile(filename, 'utf8', function (err, data) {
-    if (err) throw err;
-    console.log(filename+" -> "+data);
-});
+function filedata(filename) {
+    fs.readFile(filename, cb);
+    function cb(err, data) {
+        if (err) throw err;
+        console.log(filename + " -> " + data);
+    }
 }
 function isFileorNot(dirpath) {
     //check extension
