@@ -20,6 +20,7 @@ function extractHtml(html) {
 
     // another ex
     //let allCommentaries = selectorTool(".sidebar-widget-coverage-item .content .title");
+    
 
     console.log(allCommentaries.length);
     //rule -> index, cheerioselector
