@@ -26,7 +26,6 @@ function extractHtml(html) {
     let batsmantableArr = selectorTool(".table.batsman");
     for (let i = 0; i < batsmantableArr.length; i++) {
         let batsmanNameAnchor = selectorTool(batsmantableArr[i]).find("tbody tr .batsman-cell a");
-
         for (let j = 0; j < batsmanNameAnchor.length; j++) {
             let name = selectorTool(batsmanNameAnchor[j]).text();
             let teamName = teamNameArr[i];
